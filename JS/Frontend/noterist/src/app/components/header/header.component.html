@@ -1,0 +1,33 @@
+<header 
+*ngIf="renderNav"
+>
+    <div class="container">
+        <a routerLink="/">
+            <h2 class="brand">
+                Noterist
+            </h2>
+        </a>
+        <button (click)="openNav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div class="nav-bg-hider" [ngClass]="{open: isNavOpen}"></div>
+    <nav [ngClass]="{
+        'open': isNavOpen
+    }">
+        <div class="container">
+            <div class="nav-section">
+                <a href="#" class="nav-link">
+                    <mat-icon>contact_page</mat-icon>
+                    About</a>
+                <a href="#" class="nav-link">
+                    <mat-icon>room_preferences</mat-icon>
+                    Preferences</a>
+                <a href="#" class="nav-link">
+                    <mat-icon>settings</mat-icon>
+                    Settings</a>
+            </div>
+
+        </div>
+    </nav>
+</header>

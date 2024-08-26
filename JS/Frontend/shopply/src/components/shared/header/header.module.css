@@ -1,0 +1,19 @@
+header {
+    /* background-color: rgb(7, 7, 7); */
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.headerContainer {
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    gap: 1rem;
+}

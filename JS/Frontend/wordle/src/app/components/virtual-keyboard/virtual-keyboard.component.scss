@@ -1,0 +1,68 @@
+@mixin scaleUp($scale){
+    animation: scaleUpAnim 0.75s ease-in-out calc(1ms * var(--stagger-duration) * var(--required-letters));
+    @keyframes scaleUpAnim {
+        50% {
+            transform: scale($scale);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+
+
+.game-keyboard {
+    width: min(100%, 50rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    &-row {
+        display: flex;
+    width: 100%;
+        flex-direction: row;
+        justify-content: stretch;
+        gap: 0.25rem;
+     }
+    &-button {
+        align-items: center;
+        -webkit-appearance: none;
+        background-color: hsl(0, 0%, 60%);
+        font-weight: 500;
+        border: 2px solid transparent;
+        border-radius: 4px;
+        color: var(--theme-color);
+        cursor: pointer;
+        display: flex;
+        flex: 1 1 auto;
+        font-size: 1.25rem;
+        justify-content: center;
+        min-height: 2.5rem;
+        text-decoration: inherit;
+        text-transform: capitalize;
+        user-select: none;
+        transition: background-color 0.2s ease-in calc(1ms * var(--stagger-duration) * var(--required-letters)),
+        color 0.2s linear calc(1ms * var(--stagger-duration) * var(--required-letters));
+        
+        &.wrong {
+            background-color: var(--letter-state-wrong);
+            @include scaleUp(1.2);
+            color: white;
+
+        }
+        &.correct {
+            background-color: var(--letter-state-correct);
+            @include scaleUp(1.2);
+            color: white;
+
+        }
+        &.within {
+            background-color: var(--letter-state-within);
+            @include scaleUp(1.2);
+            color: white;
+
+        }
+
+        
+    }
+}

@@ -1,0 +1,38 @@
+<form [formGroup]="controlGroup" 
+    class="flex" 
+    *ngIf="(conversionWayChanges | async) as conversionWay"
+    (ngSubmit)="onSubmit()"
+    >
+    <mat-form-field appearance="fill">
+        <mat-label>From</mat-label>
+        <mat-select  name="from" formControlName="from" >
+            <mat-option  *ngFor="let choice of defaultChoices"
+            [value]="choice.value"
+            [disabled]="conversionWay.to == choice.value"
+            >{{choice.displayName}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter a {{fromControl.value}}</mat-label>
+        <input type="text" matInput formControlName="input" name="input"  />
+        <mat-error *ngIf="inputControl.hasError('nsError')">{{inputControl.getError('nsError')}}</mat-error>
+        <mat-error *ngIf="inputControl.hasError('required')">Value is required.</mat-error>
+    </mat-form-field>
+    <button class="switch-button" type="button" mat-button (click)="flipChoices()">
+        <mat-icon>
+            sync_alt
+        </mat-icon>
+    </button>
+    <mat-form-field appearance="fill">
+        <mat-label>To</mat-label>
+        <mat-select  name="to" formControlName="to" >
+            <mat-option  *ngFor="let choice of defaultChoices"
+            [value]="choice.value"
+            [disabled]="conversionWay.from == choice.value"
+            >{{choice.displayName}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <ng-content></ng-content>
+
+</form>

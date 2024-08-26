@@ -1,0 +1,131 @@
+<form class="container" [formGroup]="form" (submit)="onSubmit()">
+  <h3>Total Price: {{ totalPrice }}</h3>
+  <div class="products" formArrayName="products">
+    <div
+      class="products-wrapper"
+      [@productListAnimation]="productsArray.length"
+    >
+      <div
+        class="product"
+        *ngFor="let product of productsArray.controls; let index = index"
+        [formGroupName]="index"
+      >
+        <mat-form-field>
+          <input
+            type="text"
+            autofocus
+            matInput
+            name="product"
+            formControlName="name"
+            maxlength="20"
+            required
+          />
+          <mat-label for="product">Product/Service</mat-label>
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            type="number"
+            matInput
+            name="price"
+            formControlName="price"
+            style="text-align: end"
+            min="0"
+            [max]="1e10"
+            required
+          />
+          <mat-label for="price">Price</mat-label>
+          <span matPrefix>₱</span>
+          <mat-error
+            *ngIf="product.get('price')?.errors?.['invalidLengthAfterDecimal']"
+          >
+            Only 2 digits after dot.
+          </mat-error>
+          <mat-error *ngIf="product.get('price')?.errors?.['max'] as max">
+            Can't be more than {{ max.max }}
+          </mat-error>
+        </mat-form-field>
+        <button
+          type="button"
+          mat-button
+          color="warn"
+          (click)="removeProduct(index)"
+          [disabled]="productsArray.length == 1"
+        >
+          <mat-icon [inline]="true">delete</mat-icon>
+        </button>
+      </div>
+    </div>
+    <button
+      type="button"
+      mat-button
+      color="primary"
+      class="add-product"
+      (click)="addProduct()"
+      [disabled]="productsArray.length > 19"
+    >
+      Add More Product
+    </button>
+  </div>
+  <div class="tags-wrapper">
+    <mat-form-field class="example-chip-list" appearance="fill"
+    class="tags"
+      appearance="fill"
+      [@tagListAnimation]="tags.length"
+    >
+      <mat-label>Tags</mat-label>
+      <mat-chip-list #chipList>
+        <mat-chip
+          *ngFor="let tag of tags; let i = index;"
+          (removed)="removeTag(i)"
+          selectable="false"
+          >
+          {{tag.name}}
+          <button matChipRemove>
+            <mat-icon>cancel</mat-icon>
+          </button>
+        </mat-chip>
+        <input
+          placeholder="Add tag..."
+          #tagInputRef
+          [formControl]="tagInputControl"
+          [matAutocomplete]="auto"
+          [matChipInputFor]="chipList"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          (matChipInputTokenEnd)="addTag($event)">
+      </mat-chip-list>
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="addTag($event)">
+        <mat-option *ngFor="let tag of filteredTags | async" [value]="tag">
+          {{tag}}
+        </mat-option>
+      </mat-autocomplete>
+      <mat-hint *ngIf="tags.length > -1"
+        >Up to 3 tags only.
+        <span *ngIf="tags.length < 3">
+          {{ 3 - tags.length + " left." }}
+        </span>
+        <span *ngIf="tags.length == 3"> Maximum tags reached </span>
+      </mat-hint>
+    </mat-form-field>
+    <button
+      mat-button
+      id="quick-create-tag-button"
+      type="button"
+      (click)="openQuickCreateTag()"
+    >
+      <mat-icon inline>add</mat-icon>
+    </button>
+  </div>
+  <mat-form-field appearance="fill">
+    <mat-label>Reasoning</mat-label>
+    <input
+      type="text"
+      matInput
+      placeholder="Was hungry etc."
+      formControlName="reason"
+    />
+  </mat-form-field>
+  <button type="submit" mat-button color="primary">
+    {{ expenseRef == null ? "Create" : "Save Changes" }}
+  </button>
+  <button type="button" mat-button (click)="goBackToPrevPage()">Cancel</button>
+</form>

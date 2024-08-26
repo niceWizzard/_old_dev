@@ -1,0 +1,35 @@
+.joke {
+    margin: 1rem 0;
+    // background-color: hsl(200, 10%, 20%);
+    background-color: #272727;
+    padding: 0.25rem 2rem;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    .upper {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid white;
+        * {
+            text-transform: capitalize;
+        }
+    }
+    .main {
+        padding: 2rem 0;
+    }
+    .lower {
+        border-top: 1px solid white;
+        display: flex;
+        padding: 0;
+        gap: 1rem;
+        p {
+            text-transform: capitalize;
+            background-color: hsl(46, 100%, 50%);
+            border-radius: 0.25rem;
+            padding: 0.1rem 0.5rem;
+            &.safe {
+                background-color: hsl(120, 89%, 43%);
+            }
+        }
+
+    }
+}

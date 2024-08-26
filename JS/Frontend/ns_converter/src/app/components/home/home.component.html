@@ -1,0 +1,32 @@
+<app-header></app-header>
+<main>
+    <div class="container" >
+            <app-ns-selector
+             (valueSubmit)="onSubmit($event)" (isValidChanges)="isValidChanges($event)" >
+                <mat-card *ngIf="conversionInfo != null">
+                    <mat-card-content>
+                        <mat-form-field style="font-size: 1.25rem;">
+                            <mat-label>{{getDisplayName(conversionInfo.to)}}</mat-label>
+                            <input type="text" readonly [value]="conversionResult || ''" matInput  />
+                        </mat-form-field>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        Convert to: 
+                        <span  *ngIf="!isInConversionWay('dec')">
+                            <button type="button" mat-button (click)="changeConversion('dec')" >Decimal</button>
+                        </span>
+                        <span  *ngIf="!isInConversionWay('bin')">
+                            <button type="button" mat-button (click)="changeConversion('bin')" >Binary</button>
+                        </span>
+                        <span  *ngIf="!isInConversionWay('hex')">
+                            <button type="button" mat-button (click)="changeConversion('hex')" >Hexadecimal</button>
+                        </span>
+                        <span  *ngIf="!isInConversionWay('oct')">
+                            <button type="button" mat-button (click)="changeConversion('oct')" >Octal</button>
+                        </span>
+                    </mat-card-actions>
+                </mat-card>
+            </app-ns-selector>
+            
+    </div>
+</main>

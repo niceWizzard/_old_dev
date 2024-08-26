@@ -1,0 +1,11 @@
+.product {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+    .seperator {
+        flex-grow: 1;
+        border-bottom: 1px dotted white;
+        transform: translateY(-25%);
+    }
+}
+

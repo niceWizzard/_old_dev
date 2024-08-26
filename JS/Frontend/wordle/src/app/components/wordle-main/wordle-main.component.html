@@ -1,0 +1,23 @@
+<section class="container"
+[style.--required-letters]="requiredLetters"
+[style.--stagger-duration]="STAGGER_DURATION"
+>
+    <div class="flex guess-container" >
+        <app-guess-word
+        *ngFor="let i of maxGuessesArray"
+        [maxCharacters]="requiredLetters"></app-guess-word>
+    </div>
+    <button *ngIf="isPlaying" class="give-up-button" mat-button (click)="giveUp($event)" tabindex="-1" color="primary">
+        Give up?
+    </button>
+    <button *ngIf="!isPlaying" class="give-up-button" mat-button (click)="restartGame()"  color="primary">
+        Restart?
+    </button>
+    <app-virtual-keyboard class="flex center">
+       
+    </app-virtual-keyboard>
+    <br>
+    <div class="word-id" (click)="onIdClick()">
+        <p>Game ID: {{wordId}}</p>
+    </div>
+</section>

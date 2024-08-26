@@ -1,0 +1,26 @@
+@import "../header/header.component.scss";
+
+
+
+.top {
+    @include flexify(row, center, space-between);
+    margin: 1rem 0;
+}
+
+.notes div {
+    border-top: 1px solid black;
+    padding: 1rem 0;
+    color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    
+}
+
+.create-button {
+    position: fixed;
+    top: 90%;
+    left: 90%;
+    transform: translateX(-50%);
+}
+

@@ -1,0 +1,21 @@
+<div
+infiniteScroll
+(scrolled)="onScroll()"
+[infiniteScrollThrottle]="500"
+[infiniteScrollDistance]="1"
+class="infinite-scroll-container"
+>
+    <app-joke 
+    *ngFor="let joke of jokeGetter.cachedJokes"
+    [joke]="joke"
+    ></app-joke>
+    <h2 *ngIf="!noMoreJokes">Loading.....</h2>
+    <h1 *ngIf="noMoreJokes">
+      No Mreo JOkes
+    </h1>
+</div>
+<app-timed-button
+(onFillUp)="onFillup()"
+>
+<mat-icon>arrow_upward</mat-icon>
+</app-timed-button>

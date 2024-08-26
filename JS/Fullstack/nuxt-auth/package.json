@@ -1,0 +1,19 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@sidebase/nuxt-auth": "^0.6.0-beta.5",
+    "nuxt": "^3.7.0"
+  },
+  "dependencies": {
+    "next-auth": "^4.21.1"
+  }
+}

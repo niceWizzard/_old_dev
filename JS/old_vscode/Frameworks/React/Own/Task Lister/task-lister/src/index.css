@@ -1,0 +1,228 @@
+
+
+
+:root{
+    --remove-btn-size: 30px;
+}
+
+
+span{
+    margin: 0.1em;
+}
+
+*{
+    font-family: 'Poppins', serif;
+}
+
+.nav-bar{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 99;
+
+}
+
+.tasks-container{
+    width: 100%;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    /* flex-wrap: wrap; */
+}
+
+.task{
+    display: flex;
+    min-height: 150px;
+    min-width: 100px;
+    
+    border-radius: 20px;
+    padding: 3em 3em;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+
+
+.task.finished{
+    filter: opacity(0.6);
+    text-decoration: line-through;
+}
+
+.task-text{
+    width: 60%;
+}
+
+.date{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.created-date{
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+.btn-remove{
+    width: var(--remove-btn-size);
+    height: var(--remove-btn-size);
+    border: none;
+    background-color: red;
+    color: #fff;
+    position: absolute;
+    border-radius: 100%;
+    top: 2%;
+    right: 0.5%;
+}
+.body{
+    overflow: hidden;
+}
+
+.task-form{
+    width: 90%;
+    min-height: 50vh;
+    margin: 3em auto;
+    /* transform: translateY(-100%); */
+    /* background-color: red; */
+    transition: height 2s ease;
+    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    border-radius: 10px;
+}
+
+
+.task-form form{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    font-size: 1.3rem;
+    margin-top: 1em;
+    gap: 1em;
+
+}
+
+.input{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 1em;
+}
+
+.input label{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+    
+.input input{
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 80%;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+    height: 50px;
+}
+
+
+.btn-submit{
+    align-self: flex-end;
+}
+
+
+.sort-button{
+    width: 200px;
+    height: 80px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+option{
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.main-body{
+    margin: 3em auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sort-button{
+    align-self: flex-end;
+    border-radius: 10px;
+}
+
+
+@media(max-width: 565px) {
+
+    .task-form form{
+        flex-direction: column;
+        font-size: 1rem;
+    }
+
+    .input{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input label{
+        font-size: 1.2;
+        font-weight: 400;
+    }
+
+    .input select{
+        width: 10em;
+        height: 2.2em;
+        display: flex;
+    }
+
+    select[name="sort"] {
+        width: 70%;
+        font-size: 1.5rem;
+        height: 70px;
+    }
+
+
+
+    .date{
+        font-size: 1.3em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+}
+
+    .created-date{
+        font-size: 1rem;
+    }
+    
+    .task-title{
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    .task-description{
+        font-size: 0.9rem;
+    }
+
+    .task-container{
+        width: 100%;
+    }
+}
+

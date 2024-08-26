@@ -1,0 +1,38 @@
+.letter-box {
+    border: 2px solid hsl(0, 0%, 61%);
+    width: 3.5rem;
+    height: 3.5rem;
+    perspective: 1000px; 
+    color: white;
+    transition: background-color 0.2s ease-in;
+    transition-delay:  calc(var(--stagger-duration) *var(--loop-index) * 1ms);
+    background-color: var(--letter-state-empty);
+    span {
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+    &.wrong{ 
+        background-color: var(--letter-state-wrong);
+    }
+    &.correct {
+        background-color: var(--letter-state-correct);
+    }
+    &.within {
+        background-color: var(--letter-state-within);
+    }
+    &.animated{
+        animation: scale 0.15s ease-out;
+    }
+}
+.guess {
+    gap: 0.25rem;
+
+}
+@keyframes scale {
+    to {
+        transform: scale(1.15);
+    }
+}
+@function ms($ms) {
+    @return calc($ms * 1ms);
+}

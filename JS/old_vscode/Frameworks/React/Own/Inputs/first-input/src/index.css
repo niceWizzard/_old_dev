@@ -1,0 +1,31 @@
+
+.input-container{
+    position: relative;
+}
+
+.input-container > input{
+    width: 100%;
+}
+
+.clear-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    transform: translate(-10%, 50%);
+    line-height: 0%;
+    font-size: 1em;
+}
+
+.ul-warning{
+    width: 30%;
+}
+
+li {
+    transition: color 0.5s ease;
+}
+
+
+

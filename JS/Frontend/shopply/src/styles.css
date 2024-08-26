@@ -1,0 +1,9 @@
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.p1 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}

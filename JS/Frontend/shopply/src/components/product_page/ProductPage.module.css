@@ -1,0 +1,18 @@
+.css {
+    --nice-color: white;
+    background-color: hsl(0, 0%, 92.5%);
+}
+
+
+
+.niced {
+    background-color: var(--nice-color);
+    margin-block: 0.25rem;
+}
+
+.niced:first-child {
+    margin-top: 0;
+}
+.niced:last-child {
+    margin-bottom: 0;
+}

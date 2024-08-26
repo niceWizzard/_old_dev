@@ -1,0 +1,48 @@
+header {
+    nav {
+        position: fixed;
+        bottom: 0%;
+        left: 50%;
+        height: 7.5vh;
+        width: 100vw;
+        background-color: black;
+
+        transform: translateX(-50%);
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+
+            li {
+                width: 100%;
+                height: 100%;    
+            }
+            .nav-item {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                background-color: red;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                mat-icon {
+                    font-size: 1.5rem;
+                }
+
+                &.active {
+                    background-color: blue;
+                }
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+        
+    }
+
+}

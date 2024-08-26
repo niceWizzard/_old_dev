@@ -1,0 +1,26 @@
+main {
+    margin-top: 1rem;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.tag {
+    width: 100%;
+    display: flex;
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    .text {
+        display: flex;
+        gap: 2.5rem;
+    }
+}

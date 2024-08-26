@@ -1,0 +1,29 @@
+<header>
+    <div class="container">
+        <a routerLink="/" class="non-default">
+            <h2 class="brand">Spenxer</h2>
+        </a>
+        <button mat-button class="menu-button" (click)="openNav()">
+            <mat-icon inline="true">menu</mat-icon>
+        </button>
+    </div>
+    <div class="nav-container" (click)="onInsideNavClick($event)" [ngClass]="{'hidden': isNavHidden}">
+        <div class="backdrop"></div>
+        <nav>
+            <div class="container">
+                <button class="closing-button" (click)="closeNav()">
+                    <mat-icon inline="true">close</mat-icon>
+                </button>
+                <div class="content">
+                    <a routerLink="/" class="non-default nav-link">Recent Expenses</a>
+                    <a routerLink="/home" class="non-default nav-link">Home</a>
+                    <a routerLink="settings" class="non-default nav-link">Settings</a>
+                    <app-dropdown-link
+                    [links]="links"
+                    name="Settings"
+                    ></app-dropdown-link>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>

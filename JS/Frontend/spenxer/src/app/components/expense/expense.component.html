@@ -1,0 +1,41 @@
+<div class="expense"
+>
+    <div class="container" 
+    >
+        <div class="tags-list">
+            <span class="tag"
+            *ngFor="let tag of tags"
+            >{{tag.name}}</span>
+        </div>
+        <div class="middle">
+            <h3 class="price">
+                {{expense.totalPrice}}
+            </h3>
+        </div>
+            
+        <div class="bottom">
+            <div class="date-wrapper">
+                <p class="date">
+
+                    {{expense.lastModified ? "Modified at: ": "Created at: "}}
+                    {{
+                    (expense.lastModified || expense.date) | readableDate
+                }}</p>
+            </div>
+            <div class="options">
+                <a mat-button [routerLink]="'expense/edit/' + expense.id" >
+                    <mat-icon inline>edit</mat-icon>
+                </a>
+                <button mat-button 
+                (click)="delete()"
+                >
+                    <mat-icon inline>delete</mat-icon>
+                </button>
+                <button mat-button (click)="showPreview()" id="unexpand-details" >
+                    <mat-icon inline>open_in_full</mat-icon>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</div>

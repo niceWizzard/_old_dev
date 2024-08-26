@@ -1,0 +1,17 @@
+<div class="joke">
+    <div class="upper">
+        <h3 class="category">{{joke.category}}</h3>
+        <p class="type">{{joke.type}}</p>
+    </div>
+    <div class="main">
+        <p>
+            {{joke.content}}
+
+        </p>
+    </div>
+    <div class="lower">
+        <p *ngFor="let flag of arr">{{flag}}</p>
+        <p *ngIf="joke.safe" class="safe">Safe</p>
+    </div>
+    <h5>{{joke.id}}</h5>
+</div>

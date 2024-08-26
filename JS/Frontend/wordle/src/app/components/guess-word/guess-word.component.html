@@ -1,0 +1,14 @@
+<div class="flex center">
+    <div class="guess flex"
+    [@nice]="isLocked"
+    [style.--stagger-duration]="staggerDuration"
+    >
+        <div *ngFor="let l of letterArray; let index = index;" 
+        [class]="l.state + ' letter-box flex center'" 
+        [ngClass]="{'animated': l.animated && l.value != ''}"
+        [style.--loop-index]="index"
+        >
+            <span>{{l.value || ""}}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+.expense {
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    box-shadow: -6px 6px 10px 1px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    color: inherit;
+    .container {
+        display: flex;
+        box-sizing: border-box;
+        padding: 0.5rem 0.25rem ;
+        flex-direction: column;
+        position: relative;
+    }
+    .middle {
+        display: flex;
+        justify-content: space-between;
+    }
+    .price {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .tags-list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.25rem;
+        .tag {
+            font-size: 0.75rem;
+            background-color: red;
+            padding: 0.1rem 0.5rem;
+            border-radius: 0.25rem;
+        }
+    }
+    
+
+    .bottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        .date-wrapper {
+            font-size: 0.75rem;
+            font-weight: 300;
+            opacity: 0.8;
+        }
+        .options {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0;
+            .mat-button {
+                font-size: 1rem;
+                min-width: 0rem;
+            }
+        }
+    }
+    
+    .content {
+        margin: 1rem 0;
+    }
+    .item {
+        display: flex;
+        gap: 0.5rem;
+        &-seperator {
+            border-bottom: 2px dotted white;
+            flex-grow: 1;
+            transform: translateY(-25%);
+        }
+    }
+    
+
+}

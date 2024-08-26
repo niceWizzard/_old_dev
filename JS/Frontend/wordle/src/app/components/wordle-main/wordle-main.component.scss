@@ -1,0 +1,28 @@
+.container {
+    padding-top: 2vh;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+.give-up-button {
+    margin: 0.5rem 0;
+}
+
+.guess-container {
+    gap: 0.25rem;
+    flex-direction: column;
+}
+
+app-virtual-keyboard {
+    width: 100%;
+}
+
+.word-id {
+    color: white;
+}

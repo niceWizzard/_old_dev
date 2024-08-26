@@ -1,0 +1,11 @@
+.d-flex.gap-2 {
+    gap: 1rem;
+  }
+
+main {
+    min-height: 100vh;
+}
+footer {
+  border-top: 1px solid black;
+  background-color: hsl(213, 10%, 20%);
+}

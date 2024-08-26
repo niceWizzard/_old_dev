@@ -1,0 +1,12 @@
+{
+    "name": "Small Sharp Tool",
+    "env": {
+        "SESSION_KEY": {
+            "description": "A secret key for verifying the integrity of signed cookies.",
+            "value": "thisismysecretLBAvedO04qO00RKlauxVrGmzUIENCVe16PAkP1CWtvnB6Z4vfA1V0cbnndPYBevETrb7P3K7bchftmLfuDlnhhMDKFAJvrhwV7WOvACbP5bhk6B6LvJ1xvILf7UocTzWlgYJlxlfACfNuqnmqeVZEc6dOXzZb3KNYCCnkqAcMUvA2zCsX6rAJUWeXUhdxnp"
+        },
+        "MONGO_URI": {
+            "value": "mongodb+srv://richard123:richard123@loadlister.xpypg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+        }
+    }
+}

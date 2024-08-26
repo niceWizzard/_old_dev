@@ -1,0 +1,22 @@
+@use "../header.component.scss";
+
+.dropdown {
+    @extend header, nav, .nav-link;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    &-header {
+      width: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+    }
+    &-content {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }

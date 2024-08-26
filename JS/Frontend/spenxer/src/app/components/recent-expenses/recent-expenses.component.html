@@ -1,0 +1,23 @@
+<main>
+    <div class="container">
+        <h3 class="today-spendings">Total Spendings: Php {{totalPrice$ | async}}</h3>
+        <section class="recent-expenses">
+            <div class="top">
+                <h2>Recent Expenses</h2>
+
+            </div>
+            <ng-container *ngIf="(expenseList | async) as _expenseList">
+
+                <app-expense *ngFor="let exp of _expenseList" [expense]="exp">
+                </app-expense>
+                <h4 *ngIf="_expenseList.count() == 0">
+                    You have no spendings yet
+                </h4>
+            </ng-container>
+
+        </section>
+        <button mat-icon-button class="create-expense-button" routerLink="expense/edit/new">
+            <mat-icon inline>add</mat-icon>
+        </button>
+    </div>
+</main>

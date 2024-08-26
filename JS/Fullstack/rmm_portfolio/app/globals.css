@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav__link {
+    @apply text-white hover:text-white text-3xl font-bold;
+}
+
+.nav__link.active {
+    @apply text-brand underline;
+}
+
+.nav__link-desktop {
+    @apply max-md:hidden hover:scale-110 hover:text-brand
+    focus:scale-110
+     text-white text-xl font-bold transition-transform ease-in-out block ;
+}
+
+.p__container {
+    @apply py-6 px-12 max-md:px-6 max-xs:px-3;
+}
+
+.techs-used-container {
+    @apply grid gap-3;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}

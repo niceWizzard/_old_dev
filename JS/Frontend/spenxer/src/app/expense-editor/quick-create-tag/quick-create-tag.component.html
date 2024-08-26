@@ -1,0 +1,48 @@
+<h3 mat-dialog-title>Create a New Tag</h3>
+<p>Tags left: {{tagsLeft}} / {{this.tagService.TAGS_LIMIT}}</p>
+<form class="quick-create-tag" mat-dialog-content (submit)="onSubmit()"
+*ngIf="tagsLeft > 0"
+>
+    <div class="container">
+        <mat-form-field appearance="fill">
+            <input type="text" 
+            matInput #tagInput [formControl]="tagInputControl" name="tagName" 
+            required [minlength]="3" [maxLength]="15" 
+            >
+            <mat-label>New tag</mat-label>
+            <mat-hint>
+                Up to 15 characters only.
+                <span *ngIf="tagInput.value.length < 15">{{15 - (tagInput.value.length || 0) }} characters left</span>
+                <span *ngIf="tagInput.value.length == 15">Max characters reached.</span>
+            </mat-hint>
+            <mat-error *ngIf="tagInputControl.hasError('required')">
+                Required
+            </mat-error>
+            <mat-error *ngIf="tagInputControl.hasError('alreadyExist')">
+                Already exists
+            </mat-error>
+            <mat-error *ngIf="tagInputControl.hasError('pattern')">
+                Special Characters not allowed
+            </mat-error>
+            <mat-error *ngIf="tagInputControl.hasError('minlength')">
+                Atleast 3 characters is required.
+            </mat-error>
+        </mat-form-field>
+        <div class="actions" mat-dialog-actions>
+            <mat-checkbox [(ngModel)]="closeOnCreate" name="closeOnCreate"
+            >
+                Close window on create
+            </mat-checkbox>
+            <button mat-button type="submit">
+                Create
+            </button>
+            <button mat-button type="button" mat-dialog-close>
+                Cancel
+            </button>
+        </div>
+        
+    </div>
+</form>
+<a class="non-default"
+        routerLink="/settings/tags"
+        >Manage Tags</a>

@@ -1,0 +1,32 @@
+.recent-expenses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  .top {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    h2 {
+      font-weight: 500;
+    }
+  }
+}
+
+.today-spendings {
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 400;
+}
+
+.create-expense-button {
+  position: fixed;
+  top: 90%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}

@@ -1,0 +1,11 @@
+<header #header>
+        <a routerLink="/">
+            <mat-icon>arrow_back_ios</mat-icon>
+        </a>
+</header>
+<form *ngIf="note" >
+        <textarea class="note-content" maxlength="5000"  name="content" 
+        [ngModel]="note.content" 
+        (ngModelChange)="onChange($event)"
+        ></textarea>
+</form>

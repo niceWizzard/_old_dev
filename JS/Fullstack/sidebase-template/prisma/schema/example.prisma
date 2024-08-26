@@ -1,0 +1,4 @@
+model Example {
+  id          String @id @default(uuid())
+  details     String
+}

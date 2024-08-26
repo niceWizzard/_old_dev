@@ -1,0 +1,190 @@
+:root{
+  --bg-color: #000;
+  --links-color: cyan;
+  --button-color: #orange;
+  --header-color: #488214;
+  
+  --text-color: #fff;
+  --text-small: 0.5rem;
+  --text-normal: 1rem;
+  --text-md: 1.2rem;
+  --text-large: 1.5rem;
+  --text-xl: 1.7rem;
+
+
+  --btn-unlike-color: blue;
+
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+
+}
+
+p{
+  white-space: pre-wrap;
+}
+
+input, textarea{
+  outline: none;
+}
+
+header {
+  height: 20vh;
+  background-color: var(--header-color);
+}
+
+header ul, a{
+  list-style-type: none;
+  text-decoration: none;
+}
+
+header a:hover{
+  text-decoration: underline;
+}
+
+
+
+header .container{
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbrand{
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+
+}
+
+.navlinks{
+  display: flex;
+  width: 37vw;
+  height: 10vh;
+  font-size: 2rem;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+
+}
+
+.navlink{
+  width: 20em;
+}
+
+
+
+.top-blogs{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 1em;
+  border: 2px solid black;
+  border-radius: 2em;
+  overflow-x: scroll;
+}
+
+.top-blogs .blog-card{
+  min-width: 400px;
+  border: none;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.4);
+
+
+}
+
+.blog-card{
+  border: 2px solid black;
+  margin: 2em 0;
+  padding: 1em;
+  box-sizing: border-box;
+
+}
+
+.likes-group {
+  display: flex;
+  width: 50%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+
+.like-amount {
+  font-weight: 500;
+  font-size: var(--text-md);
+}
+
+.btn-like{
+  width: 3.5em;
+  height: 2.8em;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+.btn-like img{
+  width: 100%;
+  height: 100%;
+}
+
+.btn-like.liked {
+  background-color: var(--btn-unlike-color);
+  color: white;
+}
+
+
+.create{
+  width: 90%;
+  margin: 1em auto;
+  box-sizing: border-box;
+}
+
+.create-form{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.create-form input:focus, .create-form textarea:focus{
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3), -2px -5px 10px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.create-title{
+  height: 3em;
+  padding: 1em;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.create-body{
+  resize: none;
+  width: 100%;
+  min-height: 200px;
+  padding: 1em 1.5em;
+  line-height: 1.8rem;
+  font-size: var(--text-md);
+  font-weight: 400;
+  box-sizing: border-box;
+
+
+}
+
+
+
+.inverted{
+  transform: rotate(180deg);
+}
+
+
+

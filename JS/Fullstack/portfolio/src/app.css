@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: 'Inria Sans', sans-serif;
+    @apply text-on-background;
+}
+
+.button {
+    @apply bg-on-background-pop text-on-surface rounded-md px-4 py-2;
+}
+

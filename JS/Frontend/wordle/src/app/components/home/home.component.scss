@@ -1,0 +1,25 @@
+header {
+  color: white;
+  height: 7vh;
+  background-color: var(--theme-color);
+  padding: 0 2rem;
+  .brand {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  border-bottom: 2px solid grey;
+
+}
+
+footer  {
+
+  min-height: 5vh;
+  border-top: 2px solid grey;
+  margin: 2rem auto;
+  padding: 1rem 0rem;
+  box-sizing: border-box;
+  div {
+    color: white;
+  }
+}

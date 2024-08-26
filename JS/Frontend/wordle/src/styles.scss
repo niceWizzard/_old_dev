@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@import "@angular/material/theming";
+
+@include mat.core();
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: var(--theme-color);
+  min-height: 100vh;
+}
+
+.flex {
+    display: flex; 
+    &.row {
+        flex-direction: row;
+    }
+    &.center {
+        justify-content: center;
+        align-items: center;
+    }
+    &.align-items-center {
+        align-items: center;
+    }
+
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+:root{
+    --letter-state-wrong: hsl(0, 4%, 29%);
+    --letter-state-within: hsl(50, 90%, 50%);
+    --letter-state-correct: hsl(120, 90%, 30%);
+    --letter-state-empty: hsl(0, 90%, 0%);
+    --theme-color: hsl(0, 0%, 2%);
+}
+
+
+mat-dialog-container {
+    background: var(--theme-color) !important;
+ }
+
+$angular-primary: mat.define-palette(mat.$indigo-palette);
+$angular-accent: mat.define-palette(mat.$indigo-palette);
+
+$angular-warn: mat.define-palette(mat.$indigo-palette);
+
+$angular-default-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $angular-primary,
+      accent: $angular-accent,
+      warn: $angular-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($angular-default-theme);

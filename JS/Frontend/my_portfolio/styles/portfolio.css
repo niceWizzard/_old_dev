@@ -1,0 +1,61 @@
+
+
+.portfolio-card {
+    background-color: hsl(213, 20%, 10%);
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.portfolio-card .portfolio-card-title {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-card .portfolio-card-desc {
+    text-align: left;
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+
+.portfolio-card > .portfolio-img {
+    padding: 0;
+}
+.portfolio-card > .portfolio-img > a  {
+    width: 100%;
+}
+
+.portfolio-card > .portfolio-img > a > img {
+    width: min(80vw, 100%);
+    /* width: 70vw; */
+    transition: transform 0.2s ease-out;
+}
+.portfolio-card > .portfolio-img {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-card > .portfolio-img > a::after {
+    content: "";
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(80vw, 100%);
+
+    height: 30%;
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dark);
+    transition: all 0.5s ease-in-out;
+    color: white;
+}
+
+.portfolio-card > .portfolio-img:hover > a::after {
+    content: "Visit Website";
+    bottom: 0%;
+}

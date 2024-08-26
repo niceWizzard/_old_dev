@@ -1,0 +1,21 @@
+.quick-create-tag {
+  background-color: var(--primary-color);
+  padding: 1.5rem;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .actions {
+    width: 100%;
+  }
+  h3 {
+    align-self: flex-start;
+    font-size: 1.5rem;
+  }
+  mat-form-field,
+  button {
+    width: 100%;
+  }
+}

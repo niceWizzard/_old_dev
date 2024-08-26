@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.highlight__circle-12 {
+    @apply top-[60%] left-[78%] ;
+}
+.highlight__circle-156 {
+    @apply top-[-40%] left-[100%] ;
+
+}
+.highlight__circle-36 {
+    @apply top-[35%] left-[90%] ;
+}
+.highlight__circle-200 {
+    @apply top-[0%] left-[-5%] ;
+}
+
+
+
+:root {
+    --pop-scale: 1;
+    --pop-scale-over: 1.1;
+}
+
+@media screen and (max-width: 420px) {
+    :root {
+        --pop-scale: 0.5;
+        --pop-scale-over: 0.6;
+    }
+    .highlight__circle {
+        scale: var(--pop-scale);
+    }
+
+}
+
+.highlight__circle-anim {
+    animation: pop 1.5s both 
+        cubic-bezier(.17,.67,.19,.93);
+    transform-origin: bottom left;
+}
+
+.brand__anim {
+    animation: fadeIn 0.8s backwards 
+        ease-in-out;
+        animation-delay: 300ms;
+    transform-origin: top center;
+}
+
+.button-primary {
+    @apply 
+    bg-primary text-onPrimary border-b-4 border-primary-dark rounded-md
+    transition-colors duration-300 ease-in-out
+    hover:bg-primary-dark;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scaleY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes pop {
+    0% {
+        scale: 0
+    }
+    80% {
+        scale: var(--pop-scale-over)
+        /* scale: var(1.1) */
+    }
+    100% {
+        scalel: var(--pop-scale)
+        /* scalel: var(1) */
+    }
+}

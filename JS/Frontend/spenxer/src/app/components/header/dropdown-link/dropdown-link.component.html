@@ -1,0 +1,15 @@
+<div class="dropdown">
+    <div class="dropdown-header" (click)="showContent = !showContent">
+        <span class="title">{{name}}</span>
+        <mat-icon>expand_more</mat-icon>
+    </div>
+    <div class="dropdown-content"
+    *ngIf="showContent"
+    >
+        <a *ngFor="let link of links" class="dropdown-link non-default"
+        [routerLink]="link.route"
+        >
+            {{link.name}}
+        </a>
+    </div>
+</div>

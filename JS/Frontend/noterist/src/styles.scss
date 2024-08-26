@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --theme-color: #1D1D1D;
+    --bg-color: #FEFEFE;
+    --interaction-color: blue;
+}
+
+body {
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-color);
+}
+
+h1,h2,h3 {
+    margin: 0 !important;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
