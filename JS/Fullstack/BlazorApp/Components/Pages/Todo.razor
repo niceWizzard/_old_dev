@@ -1,0 +1,40 @@
+﻿@page "/todo"
+@rendermode InteractiveServer
+@using Nice; 
+
+@inject TodoService TodoService
+
+
+<h3>Todo (@todos.Count(todo => !todo.IsDone))</h3>
+<br>
+<form @onsubmit="AddToDo">
+    <input type="text" placeholder="Something to do!?" @bind="newTodo">
+    <input type="submit"  value="Add Todo">
+</form>
+<br>
+<ul>
+    @foreach (var todo in todos)
+    {
+        <li>
+            <input type="checkbox" @bind="todo.IsDone" />
+            <input type="text" @bind="todo.Title">
+        </li>
+    }
+</ul>
+
+@code {
+    List<TodoItem> todos => TodoService.GetTodos();
+    string? newTodo;
+
+    bool InputIsInvalid => string.IsNullOrWhiteSpace(newTodo);
+
+    void AddToDo() 
+    {
+        if(InputIsInvalid) return;
+        TodoService.AddTodoItem(new TodoItem {
+            Title = newTodo,
+            IsDone = false
+        });
+        newTodo = string.Empty;
+    }
+}

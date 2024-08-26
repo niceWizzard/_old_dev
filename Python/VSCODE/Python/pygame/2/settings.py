@@ -1,0 +1,14 @@
+WIDTH = 600
+HEIGHT = 700
+TITLE = 'Car Race'
+FPS = 60
+
+ROAD_WIDTH = (WIDTH//6)
+
+
+PLAYER_SPEED = 5
+
+BLACK = (0, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0 , 0, 255)
+WHITE = (255,255,255)

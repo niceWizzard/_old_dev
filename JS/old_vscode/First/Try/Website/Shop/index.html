@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="./style.css">
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Shopp</h1>
+            <input type="submit" value="Add Product" class="add-item-to-boxes">
+            <input type="submit" value="Remove Product" class="remove-item-to-boxes">
+        </div>
+    </header>
+    <div class="container">
+        <div class="pop-up-window">
+            <input type="submit" value="x" class="x-button">
+
+            <form>
+                <label>Item Name</label>
+                <input type="text" id="input-item-name">
+                <label>Image link</label>
+                <input type="text" id="input-item-img">
+                <label>Price</label>
+                <input type="number" id="input-item-price">
+                <input type="submit" value="Add Item" class="add-item-to-boxes">
+            </form>
+        </div>
+    </div>
+    <section id="items">
+        <div class="container">
+            <div class="boxes">
+            </div>
+        </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+
+    <section id="cart">
+        <div class="container">
+            <h1 id="cart-title">Cart</h1>
+            <div class="cart-row-header">
+                <span class="cart-header cart-column cart-item">Item</span>
+                <span class="cart-header cart-column cart-item">Price</span>
+                <span class="cart-header cart-column cart-item">Amount</span>
+            </div>
+            <div class="cart-items">
+
+                <!-- Cart Row  -->
+
+            </div>
+            <!-- Cart Items  -->
+            <div class="cart-total">
+                <strong>Total: </strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <!-- Cart Total  -->
+            <input type="submit" value="Purchase" class="purchase-items btn">
+        </div>
+    </section>
+    <footer>
+        <p>Hey</p>
+    </footer>
+
+</body>
+<script src="./script.js"></script>
+
+</html>

@@ -1,0 +1,27 @@
+
+
+.container{
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.up{
+    display: inline-block;
+    background-color: cyan;
+    width: 50rem;
+    height: 100px;
+}
+
+.up:hover{
+    padding: 100px;
+    position: absolute;
+}
+
+.down{
+    background-color: red;
+    width: 50rem;
+    height: 20rem;
+    border: 3px solid black;
+    box-shadow: black 10px 10px 20px;
+}

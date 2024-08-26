@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Converter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Length Converter</h1>
+        </div>
+    </header>
+    <section id="main">
+        <div class="container">
+            <div class="input">
+                <h3 class="title">Input</h3>
+                <form class="input-submit">
+                    <input type="number" step="any" required>
+                    <select name="length" class="input-length">
+                        <option value="meter">Meter</option>
+                        <option value="kilometer">Kilometer</option>
+                        <option value="inch">Inch</option>
+                        <option value="feet">Feet</option>
+                    </select>
+                    <input type="submit" value="Convert">
+                </form>
+            </div>
+            <div class="output">
+                <h3 class="title">Output</h3>
+                <form class="output-submit">
+                    <input type="number" step="any" required>
+                    <select name="length" class="output-length">
+                        <option value="kilometer">Kilometer</option>
+                        <option value="meter">Meter</option>
+                        <option value="inch">Inch</option>
+                        <option value="feet">Feet</option>
+                    </select>
+                    <input type="submit" value="Convert">
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+<script src="./app.js"></script>
+
+</html>

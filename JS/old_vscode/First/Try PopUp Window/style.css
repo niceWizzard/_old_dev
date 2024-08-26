@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    padding: 0%;
+    background-color: lightblue;
+}
+
+.container, .shake{
+    width: 900px;
+    height: 600px;
+    border: 3px solid black;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.window, .slide{
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: wheat;
+    position: relative;
+    top: 200px;
+    left: 300px;
+
+}
+
+.button{
+    width:20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: turquoise;
+    border-style: none;
+    
+}   
+
+.remove-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.pop{
+    position: absolute;
+    width: 100px;
+    height: 32px;
+    top: 500px;
+    left: 45%;
+
+}
+
+.slide{
+    animation: slide 0.8s linear;
+}
+
+@keyframes slide{
+    0%{opacity: 0%; 
+    top: 200px; left: 1000px;}
+    
+    80%{opacity: 100%; top:200px ;left: 300px; background-color: wheat;}
+    81%{top:202px ;left: 303px;}
+    100%{top:200px ;left: 300px;}
+}
+
+

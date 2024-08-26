@@ -1,0 +1,171 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  /* text-align: center; */
+  width: 80%;
+  margin: 0 auto;
+}
+
+.button:hover{
+  font-size: 14px;
+}
+
+.button:active{
+  color: black;
+  background-color: white;
+}
+
+.clr{
+  clear: both;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  font-size: 17px;
+}
+
+a:active{
+ font-size: 15px;
+ color: white;
+}
+
+.box-1{
+  background-color: rgb(34, 34, 177);
+  color: white;
+  padding: 10px;
+  border: red solid 5px;
+  margin-bottom: 20px;
+}
+
+.box-1 h1{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
+  font-style: italic;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.box-2{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: blue solid 5px;
+
+}
+
+.categories{
+ padding: 10px;
+  padding-left: 10px;
+
+  margin: 20px;
+  border: black dotted 5px;
+
+}
+
+.categories h2{
+  text-align: center;
+}
+
+.categories ul{
+  padding: 0%;
+  padding-left: 10px ;
+  padding-top: 5px;
+}
+
+.bottom-space{
+  margin-bottom: 300px;
+}
+
+.my-form{
+  padding: 20px;
+}
+
+.form-group{
+  padding-bottom: 15px;
+}
+
+.my-form label{
+  display: block;
+}
+
+.my-form input[type="text"], .my-form input[type="email"], .my-form textarea{
+  padding: 10px;
+  width: 100%;
+}
+
+.my-form input[type="submit"]{
+  padding: 7px;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+.block{
+  float: left;
+  width: 33.3%;
+  padding: 10px;
+  border: black solid 1px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+#main-block{
+  float: left;
+  width: 70%;
+}
+
+#nav-bar{
+  float: right;
+  width: 30%;
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.p-box{
+  width: 800px;
+  height: 500px;
+  border: solid 5px black;
+  margin-top: 20px;
+  position: relative;
+  background-image: url(/butterfly.jpg);
+  background-repeat: no-repeat;
+  background-position: 300px 200px;
+  background-position: center top;
+  margin-bottom: 30px;
+}
+
+ .p-box h1{
+  position: absolute;
+  top: 40px;
+}
+
+.p-box h2{
+  position: absolute;
+  bottom: 50px;
+}
+  
+
+
+.fixed-button{
+  position: fixed;
+  bottom: 0 ;
+}
+
+
+.my-list li:first-child{
+  background-color: red;
+
+}
+
+.my-list li:nth-child(4){
+  background: blue;
+}

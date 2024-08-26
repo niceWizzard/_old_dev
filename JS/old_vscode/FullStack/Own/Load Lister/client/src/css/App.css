@@ -1,0 +1,50 @@
+
+.theme-pink{
+    --bg: #f0efef;
+    --theme: #FF748C;
+    --header-bg: var(--bg);
+    --text-color: black;
+    --text-opp-color: var(--bg);
+    --button-color: pink;
+    --button-hover-color: rgb(238, 174, 185);
+    --shadow-color: #08080a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.App{
+    background-color: var(--bg);
+    height: 100vh;
+}
+/* Classess */
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+header div.container, nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    cursor: pointer;
+}
+

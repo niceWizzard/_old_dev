@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0%;
+    padding-bottom: 1000px;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+
+.container{
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.blur{
+    background-color: lightblue;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    display: none;
+    
+}
+
+div#hamburger{
+    margin: 10px 40px 0px 0px;
+    margin-left: auto;
+}
+
+div#hamburger img{
+    width: 40px;
+
+}
+
+div#logo{
+    margin-left: 100px;
+    margin-top: 15px;
+    flex: 1;
+
+}
+
+div#hamburger-menu, .slide, .unslide{
+    position: fixed;
+    background-color: aqua;
+    width: 250px;
+    height: 100%;
+    text-align: center;
+    display: none;
+
+}
+
+
+div#hamburger-menu #x-button{
+    margin: 50px 0px;
+    width: 50px;
+
+}
+
+.slide{
+    animation: slide 1s linear;
+}
+
+.unslide{
+    animation: unslide 1s linear;
+
+}
+
+.blur-animation{
+    animation: blur 0.5s linear;
+}
+
+
+@keyframes blur{
+    0%{opacity: 0;}
+    40%{opacity: 0.5;}
+}
+
+
+
+@keyframes slide{
+    0%{left: -250px;}
+    30%{left: 0%;}
+}
+
+@keyframes unslide{
+    0%{left: 0%;}
+    30%{left: -250px;}
+
+}

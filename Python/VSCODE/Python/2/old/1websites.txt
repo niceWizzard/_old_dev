@@ -1,0 +1,15 @@
+Successful Scam website crash:                                          Python Num:
+1x    https://offer.health-blog.me/heroplus_ph                          main.py
+1x                                 fifth.py
+2x    https://themainhealth.com/lycium-halosphere-ph4/                 sec.py
+
+
+
+            -------------------------- Unsuccessful ---------------------
+
+                                                                        
+https://lomdaret.com/pages/ok-philipines?                               third.py       
+any doctor domains                                                      fourth.py
+
+
+

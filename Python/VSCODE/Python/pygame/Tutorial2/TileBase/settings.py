@@ -1,0 +1,41 @@
+import pygame as pg
+# define colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
+DARKGREY = (40, 40,40)
+LIGHTGREY = (100, 100, 100)
+BROWN = (106, 55,5 )
+
+WIDTH = 1024
+HEIGHT = 768 - 64
+FPS = 60
+TITLE = 'Tile Map'
+BGCOLOR = BROWN
+
+TILE_SIZE = 64
+GRID_WIDTH = WIDTH/TILE_SIZE
+GRID_HEIGHT = HEIGHT/TILE_SIZE
+
+WALL_IMAGE = 'tileGreen_39.png'
+
+# PLAYER
+PLAYER_SPEED = 200
+PLAYER_ROTATE_SPEED = 250
+PLAYER_IMG = 'manBlue_gun.png'
+PLAYER_HIT_RECT  = pg.Rect(0, 0, 35,35)
+
+#MOBS 
+MOB_IMAGE = 'zombie1_hold.png'
+MOB_SPEED = 100
+MOB_HITBOX = pg.Rect(0, 0, 30, 30)
+
+
+
+
+
+
+

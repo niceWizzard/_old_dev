@@ -1,0 +1,21 @@
+body{
+    background: #333;
+}
+
+.box{
+    background: white;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    transition-property: background, border-radius, transform;
+    transition-duration: 1s, 2s, 3s;
+    transition-timing-function: linear;
+}
+
+.box:hover{
+    background: red;
+    border-radius: 50%;
+    transform: rotateX(180deg);
+
+}

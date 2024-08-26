@@ -1,0 +1,13 @@
+.dashboard input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+}
+
+
+.dashboard input:focus{
+    background-color: transparent;
+    border: black 3px solid;
+}
+

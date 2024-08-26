@@ -1,0 +1,124 @@
+.game-container{
+    width: 700px;
+    height: 700px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 1em;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tic-tac-toe{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 0.2em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cell{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+.content{
+display: block;
+pointer-events: none;
+    
+}
+.cell.circle > .content{
+    width: 100%;
+    height: 100%;
+    border:5px solid black;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+.content::after, .content::before{
+    content: '';
+    display: none;
+    width: 100%;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cell.cross .content::after, .cell.cross .content::before{
+    display: block;
+}
+
+.cell.cross .content::after{
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cell.cross .content::before{
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+.players{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+ul li{
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+ul li.current-player{
+    color: black;
+}
+
+
+
+.won-box{
+    outline: 5px solid green;
+    border: none;
+}
+
+
+
+
+@media(max-width: 360px){
+    .game-container{
+        width: 300px;
+        height: 300px;
+    }
+
+    .cell{
+        width: 80px;
+        height: 80px;
+    }
+
+    .players{
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 70%;
+        width: 50%;
+    }
+
+    ul li{ 
+        font-size: 1.5em;
+    }
+
+}

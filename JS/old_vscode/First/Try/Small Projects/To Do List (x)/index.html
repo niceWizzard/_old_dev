@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">To Do List</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <form class="add-list">
+                <input type="text">
+                <input type="submit" value="Add">
+            </form>
+
+            <div class="lists">
+                <div class="select">
+                    <div class="selected">All <img src="./img/arrow-down-sign-to-navigate.png" alt=""></div>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" id="all" name="sort">
+                                <label for="all">All</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" id="completed" name="sort">
+                                <label for="completed">Completed</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" id="uncompleted" name="sort">
+                                <label for="uncompleted">Uncompleted</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="row">
+                        <p class="todo">Check Time</p>
+                        <form>
+                            <input type="submit" value="Done" class="done-row">
+                            <input type="submit" value="Remove" class="remove-row">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

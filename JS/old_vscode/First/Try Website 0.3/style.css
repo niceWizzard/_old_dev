@@ -1,0 +1,369 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #e4e4e4;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+ /* Global Class */
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.button-1{
+    height: 31px;
+    width: 100px;
+    background-color: #e23235;
+    color: white;
+    border-style: none;
+    font-size: 15px;
+}
+
+.dark-box{
+    background-color: #35424a;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    font-size: 20px;
+    line-height: 1.5em;
+    margin-top: 20px;
+}
+
+ /* Header  */
+
+header{
+    background-color: #17252a;
+    margin-top: 0%;
+    height: 95px;
+    border-bottom: 3px solid #3aafa9;
+}
+
+header .container, section#boxes .container{
+    display: flex;
+}
+
+header .current a {
+    color: #e8491d;
+    font-weight: bold;
+    text-decoration: underline #e8491d 2px;
+}
+
+
+header #logo{
+    margin-left: 5%;
+    margin-top: 20px;
+    font-size: 25px;
+    color: #feffff;
+
+}
+
+header nav{
+    margin-left: auto;
+
+}
+header nav a{
+    color: #feffff;
+}
+
+header nav a:hover {
+    color: #e8491d;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li{
+    list-style-type: none;
+    /* display: inline; */
+    margin: 0px 10px;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+ /* Section */
+
+ section#showcase{
+    color: white;
+    background: url(./images/showcase.jpg);
+    background-size: 999px;
+    background-position: center;
+    min-width: auto;
+    height: auto;
+    /* background-size: cover; */
+    text-align: center;
+    padding-top: 20px;
+
+ }
+
+
+
+ section#showcase h3{
+     margin: 0px;
+     font-size: 60px;
+ }
+
+ section#showcase p{
+    font-size: 30px;
+    padding: 30px;
+    }
+
+ /* Notification Section  */
+
+ section.notification{
+     background-color: #17252a;
+     color: white;
+ }
+
+ section.notification .container{
+    display: flex;
+    min-height: 120px;
+    padding-top: 30px;
+    box-sizing: border-box;
+ }
+
+ section.notification .container h3{
+     font-size: 35px;
+     flex: 5;
+     margin-left: 100px;
+     padding-top: 10px  ;
+ }
+ section.notification .container form{
+    flex:4;
+    padding-top: 15px;
+    margin-right: 20px;
+
+ }
+ section.notification .container form input[type="email"]{
+     height: 25px;
+     width: 250px;
+
+ }
+
+
+
+
+
+
+
+
+
+ /* Boxes  */
+
+section#boxes, section#wifi-plans .boxes{
+    display: flex;
+    /* background-color: #2b7a78; */
+    padding: 20px;
+
+}
+
+/* section#boxes div{
+    border: 1px solid black;
+} */
+
+section#boxes .container .box, section#wifi-plans .box{
+    flex-basis: 33.3%;;
+    margin: 10px;
+    background-color: #e8491d;
+    color: white;
+    padding: 20px;
+    min-height: 100px;
+}
+
+
+
+ /* Wifi Plans  */
+
+
+ section#wifi-plans{
+     background-color: #19181a;
+     display: flex;
+     flex: 10;
+     padding-bottom: 20px;
+ }
+
+ div#wifi-plans-title{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+ }
+
+ div#wifi-plans-title h3{
+     padding: 10px;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-weight: bold;
+     font-size: 40px;
+     
+ }
+ div#wifi-plans-title p{
+     font-size: 25px;
+     padding-bottom: 10px;
+
+ }
+
+ section#wifi-plans .boxes{
+     flex-wrap: wrap;        
+ }
+
+ section#wifi-plans .box{
+    margin: auto;
+    margin: 10px;
+    flex-basis: 25%;
+    min-height: auto;
+    border: 3px solid #314455;
+
+}
+
+section#wifi-plans .box h3, section#wifi-plans .box p{
+    font-size: 20px;
+    padding: 5px;
+
+}
+    
+ 
+ div#side-container{
+     flex: 1;
+     margin: 0;
+     margin: 20px 20px 0 0;
+     /* padding-top: 102px; */
+     /* flex-basis: 25%; */
+    }
+
+ div#side-container h3{
+    padding: 10px;
+    font-size: 30px;
+}
+ div#side-container input, div#side-container textarea{
+    height: 30px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+div#side-container input, input ::-webkit-input-placeholder, div#side-container textarea, textarea ::-webkit-textarea-placeholder{
+    font-size: 18px;
+}
+
+
+div#side-container textarea{
+    height: 150px;
+    margin-bottom: 0;
+}
+
+
+
+
+
+ /* About Page  */
+
+ 
+ 
+ section#main{
+     background-color: #19181a;
+     color: white;
+ }
+
+ section#main .container{
+    display: flex;
+ }
+ section#main .container #main-article .main-title{
+    padding-left: 5px;
+    font-size: 30px;
+    margin-top: 30px;
+
+
+ }
+
+
+ 
+
+
+
+
+footer{
+    border-top: 3px solid #fd5425;
+    background-color: #e8491d;
+    text-align: center;
+    color: white;
+    padding: 2.5%;
+}
+footer p{
+    margin: 0;
+    font-size: 25px;
+}
+
+@media(max-width: 868px){
+    
+    header .container, section#boxes .container, section.notification .container, section#wifi-plans, div#side-container form, section#main .container
+    {
+        display: block;
+        
+    }
+    header {
+        min-height: 150px;
+    }
+    header #logo{
+        text-align: center;
+        font-size: 30px;
+        color: #feffff;
+    
+    }
+    header nav ul li{
+        font-size: 30px;
+        margin: auto;
+    }
+    section#showcase {
+        font-size: 10px;
+        height: auto;
+    }
+    section#showcase h3{
+        font-size: 50px;
+        margin: 0;
+        padding: 0;
+    }
+    section#showcase p{
+        font-size: 30px;
+        padding-top: 10px;
+    }
+    section.notification .container{
+        padding-bottom: 10px;
+    }
+    section.notification .container h3{
+        margin: 0;
+        font-size: 30px;
+        text-align: center;
+    }
+    section.notification .container form{
+        margin: 0 10%;
+
+    }
+    section.notification .container form input[type="email"]{
+        width: 100%;
+    }   
+    section.notification .container form button, div#side-container button{
+        width: 100%;
+        margin: 0 1%;
+    }
+    div#side-container form input, div#side-container textarea{
+        width: 100%;
+    }
+
+}
+
+
+
+

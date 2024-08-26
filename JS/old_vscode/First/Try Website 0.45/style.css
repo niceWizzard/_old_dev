@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #2F303A;
+    font-family: Poppins;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style-type: none;
+}
+
+img{
+    max-width: 300px;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+
+
+header{
+    padding-top: 40px;
+    margin-bottom: 10px;
+}
+
+header .container, section .container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    font-weight: 600;
+    position: relative;
+}
+
+header .container .logo{
+    justify-self: start;
+    display: flex;
+}
+
+header .container .logo #logo{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+
+}
+
+header .container .logo #logo-text{
+    font-size: 48px;
+    color: white;
+
+}
+
+header .container nav ul{
+    display: grid;
+    font-size: 30px;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+header .container nav ul li{
+    margin-right: 100px;
+}
+
+section .container{
+    height: 80vh;
+}
+
+
+section .container img{
+    position: absolute;
+    bottom: 0;
+}
+
+section .container .right-side{
+    display: grid;
+    background-color: red;
+    width: 85vh;
+    color: white;
+    padding: 10px;
+}
+
+
+
+
+
+ /* button  */
+
+.btn{
+    min-width: 100px;
+    min-height: 30px;
+    background-color: #17628A;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.btn:hover{
+    opacity: 0.85;
+}
+
+.btn-join{
+    width: 130px;
+    height: 40px;
+}
+
+.btn-rounded{
+    border-radius: 5px;
+}

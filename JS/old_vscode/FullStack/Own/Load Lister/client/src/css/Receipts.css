@@ -1,0 +1,39 @@
+
+.receipts-container{
+     display: flex;
+    flex-wrap: wrap;    
+    
+    gap: 0.2em;
+}
+
+.receipt{
+    flex: 1 0 clamp(1%, 12em, 100vh);
+    background-color: var(--theme);
+    color: var(--text-color);
+    font-size: 1.5rem;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.info{
+    width: 100%;
+    background-color: blue;
+}
+
+.info-group{
+    display: flex;
+    background-color: red;
+    gap: 1em;
+}
+
+
+.btn-edit{
+    padding: 0.5em;
+    background-color: var(--button-color);
+    align-self: flex-end;
+}

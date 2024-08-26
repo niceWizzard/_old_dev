@@ -1,0 +1,159 @@
+
+/* Global  */
+
+body{
+    background-color: #e4e4e4;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* Global Class  */
+.container{
+    margin: auto;
+    width: 90%;
+}
+
+
+header{
+    background-color: blue;
+    min-height: 120px;
+}
+
+header .container, section#otherbrand-showcase .boxes {
+    display: flex;
+    flex-direction: column;
+}
+
+header #logo{
+    margin-top: 40px;
+    color: white;
+}
+
+header nav{
+    margin-bottom: 10px;
+    align-self: center;
+    margin-left: 3%;
+}
+
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+header nav ul li{
+    margin: 10px 50px 0px 0px;
+    font-size: 30px;
+}
+
+section#main-showcase{
+    background: url(./images/apple/Iphone_12.png);
+    height: 462px;
+    width: 512px;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+
+section#main-showcase h3{
+    padding-top: 65%;
+    font-size: 40px;
+    
+} 
+
+section#main-showcase p{
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+section#otherbrand-showcase{
+    background: cornflowerblue;
+
+
+}
+
+.brand-title{
+    font-size: 40px;
+    padding-top: 50px;
+
+}
+
+section#otherbrand-showcase .boxes{
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 30%;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+section#otherbrand-showcase .box{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    background: white;
+}
+
+section#otherbrand-showcase .box .product-name{
+    margin: 0px 0px 0px 20px;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 0px;
+}
+
+section#otherbrand-showcase .box .product-image{
+    width: 160px;
+    height: 160px;
+
+}
+
+section#otherbrand-showcase .box img[src="./images/apple/redmi_note_10.png"]{
+    width: 130px;
+    height: 150px;
+    padding-top: 12px;
+
+
+}
+
+section#otherbrand-showcase div#xiaomi-products-showcase .box {
+
+    margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+footer{
+    background: crimson;
+    text-align: center;
+    height: 90px;
+    color: white;
+
+}
+
+footer p{
+    padding: 25px 0px 10px 0px;
+    font-size: 40px;
+}
